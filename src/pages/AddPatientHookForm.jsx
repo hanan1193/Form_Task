@@ -99,7 +99,7 @@ import DisorderSelector from '../hookFormcomponents/DisorderSelector';
 import TemplateSelect from '../hookFormcomponents/TemplateSelect';
 
 const AddPatientHookForm = () => {
-  const { control, handleSubmit } = useForm({
+  const { control, handleSubmit ,reset} = useForm({
     defaultValues: {
       firstName: '',
       lastName: '',
@@ -210,7 +210,7 @@ const AddPatientHookForm = () => {
           <Button type="submit" variant="contained" color="error">
             Save
           </Button>
-          <Button variant="outlined">
+          <Button variant="outlined" onClick={() => reset()>
             Cancel
           </Button>
         </Box>
